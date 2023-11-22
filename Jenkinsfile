@@ -1,13 +1,13 @@
 pipeline {
     agent any
 
-    stage('Install dependencies') {
+    stage('Build') {
         step {
             sh 'npm install'
         }
     }
 
-    stage('Running tests') {
+    stage('Tests') {
         step {
             sh 'set NODE_OPTIONS=--experimental-vm-modules && npx jest'
         }
