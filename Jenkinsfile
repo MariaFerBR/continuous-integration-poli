@@ -3,13 +3,13 @@ pipeline {
 
     stages {
         stage('Install dependencies') {
-            step {
+            steps {
                 sh 'npm inst'
             }
         }
 
         stage('Running tests') {
-            step {
+            steps {
                 sh 'npm test'
             }
         }
