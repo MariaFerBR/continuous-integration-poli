@@ -78,7 +78,9 @@
     "vary": "^1.1.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "inst": "install"
   },
   "repository": {
     "type": "git",
@@ -90,5 +92,9 @@
   "bugs": {
     "url": "https://github.com/MariaFerBR/continuous-integration-poli/issues"
   },
-  "homepage": "https://github.com/MariaFerBR/continuous-integration-poli#readme"
+  "homepage": "https://github.com/MariaFerBR/continuous-integration-poli#readme",
+  "devDependencies": {
+    "jest": "29.7.0",
+    "supertest": "6.3.3"
+  }
 }
