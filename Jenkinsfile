@@ -3,13 +3,13 @@ pipeline {
 
     stage('Install dependencies') {
         step {
-            sh 'npm inst'
+            sh 'npm install'
         }
     }
 
     stage('Running tests') {
         step {
-            sh 'npm test'
+            sh 'set NODE_OPTIONS=--experimental-vm-modules && npx jest'
         }
     }
 }
